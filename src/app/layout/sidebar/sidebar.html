@@ -1,0 +1,21 @@
+<div class="d-flex flex-column bg-dark text-white p-3 vh-100" style="width: 250px">
+  <h4 class="mb-4">Admin Panel</h4>
+
+  <a
+    routerLink="/selecoes"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="nav-link sidebar-link mb-2"
+  >
+    Seleções
+  </a>
+
+  <a
+    routerLink="/jogadores"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="nav-link sidebar-link"
+  >
+    Jogadores
+  </a>
+</div>
