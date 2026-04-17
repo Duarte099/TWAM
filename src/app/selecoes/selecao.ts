@@ -12,4 +12,17 @@ export class SelecaoService {
   getSelecoes() {
     return this.http.get<any[]>(this.apiUrl + "Teams");
   }
+
+  getSelecao(id:string) {
+    return this.http.get<any[]>(this.apiUrl + "Teams/" + id);
+  }
+  createSelecao(data:any) {
+    return this.http.post<any[]>(this.apiUrl + "Teams/", data);
+  }
+  updateSelecao(id:string,data:any){
+    return this.http.put<any[]>(this.apiUrl + "Teams/"+id,data);
+  }
+  deleteSelecao(id:string){
+    return this.http.delete<any[]>(this.apiUrl + "Teams/"+id)
+  }
 }
