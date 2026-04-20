@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './selecoes-details.html',
-  styleUrl: './selecoes-details.css',
 })
 export class SelecaoDetails implements OnInit {
   selecao = signal<any | null>(null);
@@ -58,7 +57,8 @@ export class SelecaoDetails implements OnInit {
                   titular: j.isStartingXI,
                   golos: j.goals,
                   jogos: j.caps,
-                }));
+                }))
+                .sort((a, b) => Number(b.titular) - Number(a.titular));
 
               this.jogadores.set(filtrados);
               this.loading.set(false);

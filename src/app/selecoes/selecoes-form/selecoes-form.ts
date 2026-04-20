@@ -9,7 +9,6 @@ import { SelecaoService } from '../selecao';
   selector: 'app-selecoes-form',
   imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './selecoes-form.html',
-  styleUrl: './selecoes-form.css',
 })
 export class SelecoesForm implements OnInit {
   modoEdicao = false;

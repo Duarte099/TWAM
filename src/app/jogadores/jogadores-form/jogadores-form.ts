@@ -10,7 +10,6 @@ import { SelecaoService } from '../../selecoes/selecao';
   selector: 'app-jogadores-form',
   imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './jogadores-form.html',
-  styleUrl: './jogadores-form.css',
 })
 export class JogadoresForm implements OnInit {
   modoEdicao = false;

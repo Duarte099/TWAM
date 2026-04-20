@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './jogador-details.html',
-  styleUrl: './jogador-details.css',
 })
 export class JogadorDetails implements OnInit {
   jogador = signal<any | null>(null);

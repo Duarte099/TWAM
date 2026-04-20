@@ -55,17 +55,13 @@
           <td>
             <img [src]="s.flag" width="40" class="rounded" alt="Bandeira de {{ s.pais }}" />
           </td>
-          <td>
-            <a [routerLink]="['/selecoes', s.id]">{{ s.pais }}</a>
-          </td>
+          <td>{{ s.pais }}</td>
           <td>{{ s.confederacao }}</td>
           <td>{{ s.treinador }}</td>
           <td>{{ s.rankingFifa }}</td>
 
           <td>
-            <button class="btn btn-sm btn-info me-1" [routerLink]="['/selecoes', s.id]">
-              Ver
-            </button>
+            <button class="btn btn-sm btn-info me-1" [routerLink]="['/selecoes', s.id]">Ver</button>
             <button
               class="btn btn-sm btn-warning me-1"
               [routerLink]="['/selecoes/' + s.id + '/edit']"
