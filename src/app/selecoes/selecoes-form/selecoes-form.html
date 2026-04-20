@@ -1,1 +1,58 @@
-<p>selecoes-form works!</p>
+<div class="container mt-4">
+  @if (loading()) {
+    <div class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">A carregar...</span>
+      </div>
+      <p class="mt-2">A carregar...</p>
+    </div>
+  } @else {
+    <div class="card shadow p-4">
+      <h2 class="mb-4">
+        {{ modoEdicao ? 'Editar Seleção' : 'Criar Seleção' }}
+      </h2>
+
+      <div class="row">
+        <div class="col-md-8 mb-3">
+          <label class="form-label">Bandeira URL</label>
+          <input type="text" class="form-control" [(ngModel)]="selecao.flagUrl" />
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label class="form-label">País</label>
+          <input type="text" class="form-control" [(ngModel)]="selecao.country" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Confederação</label>
+          <select class="form-select" [(ngModel)]="selecao.confederation">
+            <option value="UEFA">UEFA</option>
+            <option value="CONMEBOL">CONMEBOL</option>
+            <option value="AFC">AFC</option>
+            <option value="CAF">CAF</option>
+            <option value="CONCACAF">CONCACAF</option>
+            <option value="OFC">OFC</option>
+          </select>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Selecionador</label>
+          <input type="text" class="form-control" [(ngModel)]="selecao.coach" />
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Ranking FIFA</label>
+          <input type="number" class="form-control" [(ngModel)]="selecao.fifaRanking" />
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end gap-2">
+        <button class="btn btn-secondary" [routerLink]="['/selecoes']">Cancelar</button>
+
+        <button class="btn btn-success" (click)="guardarDados()">
+          {{ modoEdicao ? 'Atualizar' : 'Criar' }}
+        </button>
+      </div>
+    </div>
+  }
+</div>
